@@ -1,0 +1,31 @@
+@charset 'UTF-8'
+//- Vendors
+ * Contains all the 3rd party styles
+ * ========================================================================== */
+@import 'workshop/vendors/vendors'
+
+//- Utils
+ * Contains all mixins, functions and helpers
+ * ========================================================================== */
+@import 'workshop/utils/mixins'
+@import 'workshop/utils/rem'
+@import 'workshop/utils/clearfix'
+@import 'workshop/utils/responsive'
+
+//- Base
+ * Contains all the global styles for the application as well as the resets, typography, colors, buttons, etc...
+ * You should also define a _variables.scss to define all app variables
+ * ========================================================================== */
+@import 'workshop/base/colors'
+@import 'workshop/base/typography'
+@import 'workshop/base/scaffolding'
+@import 'workshop/base/cms'
+
+//- Common
+ *========================================================================== */
+@import 'workshop/commons/commons'
+
+//- Components
+ * Contains each isolated component. Should ideally mimic the Angular component structure
+ * ========================================================================== */
+@import 'workshop/components/compontents'
