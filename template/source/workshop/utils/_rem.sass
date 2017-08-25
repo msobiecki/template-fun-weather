@@ -20,24 +20,34 @@
 //    margin: 0 24px 0 12px;
 //    margin: 0 2.4rem 0 1.2rem;
 // ----------------------------------
-$baseFontSize: 10
+$base-font-size: 10
 
 // Based on HTML reset html { font-size: 62.5%; }
 
-@function parseInt($n)
+@function parse-int($n)
   @return $n / ($n * 0 + 1)
+
+@function rem($value)
+  $root: $base-font-size
+  $val: parse-int($value)
+  $return: ()
+  @if unit($value) == 'px'
+    $return: append($return, $val / $root + rem)
+  @else
+    $return: append($return, $val * $root + px)
+  @return $return
 
 =rem($property, $values)
   $px: ()
   $rem: ()
-  $root: $baseFontSize
+  $root: $base-font-size
   @each $value in $values
     @if $value == 0 or $value == auto
       $px: append($px, $value)
       $rem: append($rem, $value)
     @else if type-of($value) == number
       $unit: unit($value)
-      $val: parseInt($value)
+      $val: parse-int($value)
       @if $unit == 'px'
         $px: append($px, $value)
         $rem: append($rem, $val / $root + rem)
@@ -52,13 +62,3 @@ $baseFontSize: 10
   @else
     #{$property}: $px
     #{$property}: $rem
-
-@function rem($value)
-  $root: $baseFontSize
-  $val: parseInt($value)
-  $return: ()
-  @if unit($value) == 'px'
-    $return: append($return, $val / $root + rem)
-  @else
-    $return: append($return, $val * $root + px)
-  @return $return

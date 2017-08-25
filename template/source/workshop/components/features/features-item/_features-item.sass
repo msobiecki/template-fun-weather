@@ -1,0 +1,39 @@
+.features-item
+	display: flex
+	flex-wrap: nowrap
+	width: 100%
+
+	+max(480px)
+		flex-wrap: wrap
+
+	&__iconbox
+		display: block
+		flex-shrink: 0
+
+		+max(480px)
+			width: 100%
+
+	&__icon
+		display: block
+		max-width: 100%
+		height: auto
+
+		+max(480px)
+			margin: 0 auto 20px
+
+	&__details
+		display: block
+		width: 100%
+		padding-left: 15px
+		cursor: default
+
+	&__title
+		margin-bottom: 15px
+		color: $lucky-point
+		font-size: 24px
+		font-weight: bold
+
+	&__text
+		color: $dark-gray
+		font-size: 16px
+		line-height: 1.5

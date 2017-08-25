@@ -39,8 +39,8 @@ rules:
   no-trailing-zero: 1
   no-transition-all: 1
   no-universal-selectors: 0
-  no-url-domains: 1
-  no-url-protocols: 1
+  no-url-domains: 0
+  no-url-protocols: 0
   no-vendor-prefixes: 1
   no-warn: 1
   property-units: 0

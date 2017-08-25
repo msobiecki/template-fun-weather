@@ -1,3 +1,1 @@
-let x = 5;
-
-console.log(x);
+import css from './app.sass';  
