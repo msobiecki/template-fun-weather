@@ -1,6 +1,13 @@
 import Slider from '../../modules/Slider';
+import $ from 'jquery';
 
-console.log(Slider);
-
-let slider = new Object(Slider);
-slider.init();
+$(document).ready(function () {
+	let slider = new Object(Slider);
+	slider.init({
+		target: '.js-widgets',
+		options: {
+			arrows: true,
+			dots: true
+		}
+	});
+});

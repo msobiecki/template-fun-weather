@@ -1,12 +1,16 @@
-.widgets
+.widgets.js-widgets
 	.widgets__container
 		.widgets__titlebox
 			h2.widgets__title SIMPLE WIDGETS
 			span.widgets__subtitle Drag and Drop
 		.widgets__box
-			.widgets__slider
-				.widgets__item
-
-				.widgets__item 
-				
-				.widgets__item
+			.widgets__slider(data-slider-box)
+				.widgets__item(data-slider-item)
+					include widgets-item/_widgets-item
+				.widgets__item(data-slider-item)
+					include widgets-item/_widgets-item
+				.widgets__item(data-slider-item)
+					include widgets-item/_widgets-item
+			.widgets__navigation 
+				.widgets__arrows(data-slider-arrows)  
+				.widgets__dots(data-slider-dots) 

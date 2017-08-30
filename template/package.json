@@ -2,7 +2,7 @@
   "name": "webpack-full",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "source/app.js",
   "scripts": {
     "dev": "webpack-dev-server --progress --colors",
     "prod": "set NODE_ENV=production&& webpack --progress --colors --watch",
@@ -30,5 +30,9 @@
     "style-loader": "^0.18.2",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "slick-carousel": "^1.7.1"
   }
 }

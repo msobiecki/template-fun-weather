@@ -186,8 +186,7 @@ const devServer = {
 	port: 9000,
 	hot: true,
 
-	open: !isProduction && !isBuild,
-	openPage: ''
+	open: false
 };
 
 /* ----------------------------- */
