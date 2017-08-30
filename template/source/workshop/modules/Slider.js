@@ -1,3 +1,4 @@
+'use strict';
 import $ from 'jquery';
 import 'slick-carousel';
 
@@ -64,4 +65,11 @@ const Slider = {
 	}
 };
 
-export default Slider;
+const SliderImageGalleryPopup = {
+	test: console.log('test')
+};
+
+// TODO Image Gallery Popup
+// TODO Video Gallery Popup + Generate Thumbnail
+
+export {Slider, SliderImageGalleryPopup};
