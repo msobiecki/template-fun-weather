@@ -1,0 +1,79 @@
+.screenshots-item
+	$root: &
+	display: block
+	width: 100%
+
+	&__box
+		display: flex
+		align-items: center
+		padding: 0 0 45px
+
+		.-screenshots-reversed &
+			flex-direction: row-reverse
+
+		+max(969px)
+			flex-wrap: wrap
+			padding: 0 0 25px
+
+	&__imagebox
+		display: block
+		width: 50%
+		+max(969px)
+			width: 100%
+
+	&__image
+		display: block
+		max-width: 100%
+		height: auto
+		+max(969px)
+			margin: 0 auto 25px
+
+
+	&__textbox
+		display: block
+		width: 50%
+		+max(969px)
+			width: 100%
+
+	&__icon
+		display: block
+		max-width: 100%
+		height: auto
+		margin-bottom: 25px
+		+max(969px)
+			margin: 0 auto 25px
+
+	&__title
+		display: block
+		margin-bottom: 15px
+		color: $cornflower-blue
+		font-size: 36px
+		font-weight: 500
+		+max(969px)
+			font-size: 28px
+			text-align: center
+
+		+max(767px)
+			font-size: 22px
+
+	&__text
+		display: block
+		width: 100%
+		margin-bottom: 15px
+		color: $lucky-point
+		font-size: 24px
+		line-height: 1.4
+		+max(969px)
+			font-size: 18px
+			text-align: center
+
+		+max(767px)
+			font-size: 14px
+
+	&__icons
+		display: block
+		max-width: 100%
+		height: auto
+		margin-bottom: 25px
+		+max(969px)
+			margin: 0 auto 25px
