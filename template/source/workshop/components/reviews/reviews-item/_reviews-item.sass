@@ -1,0 +1,46 @@
+.reviews-item
+	position: relative
+	padding: 70px 0
+	color: $lucky-point
+	cursor: default
+	+max(969px)
+		padding: 45px 0
+
+	&::before
+		position: absolute
+		top: 0
+		left: 0
+		color: $cornflower-blue
+		font-size: 140px
+		line-height: 1
+		content: '\“'
+		+max(969px)
+			font-size: 72px
+
+	&::after
+		position: absolute
+		right: 0
+		bottom: 0
+		transform: rotate(180deg)
+		color: $cornflower-blue
+		font-size: 140px
+		line-height: 1
+		content: '\“'
+		+max(969px)
+			font-size: 72px
+
+
+	&__text
+		display: block
+		width: 100%
+		margin-bottom: 20px
+		font-size: 24px
+		+max(969px)
+			font-size: 20px
+
+	&__author
+		display: block
+		width: 100%
+		font-size: 18px
+		+max(969px)
+			font-size: 14px
