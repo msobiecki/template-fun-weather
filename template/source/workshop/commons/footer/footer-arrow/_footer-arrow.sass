@@ -1,0 +1,29 @@
+.footer-arrow
+	display: none
+	position: absolute
+	right: 65px
+	bottom: 0
+	align-items: center
+	justify-content: center
+	width: 50px
+	height: 40px
+	transition: .2s background-color
+	border-top-left-radius: 4px
+	border-top-right-radius: 4px
+	background-color: $fiord
+	color: $gray-suit
+	font-size: 32px
+	cursor: pointer
+	+max(767px)
+		position: fixed
+		right: 5px
+		bottom: 5px
+		width: 40px
+		height: 40px
+		border-radius: 4px
+
+	&.-visible
+		display: flex
+
+	&:hover
+		background-color: lighten($fiord, 10)

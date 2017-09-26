@@ -1,8 +1,15 @@
 .footer
+	position: relative
 	display: block
 	width: 100%
-	padding: 75px 0
 	background-color: $lucky-point
 
 	&__container
 		+container
+
+	&__box
+		display: flex
+		flex-wrap: nowrap
+		padding: 45px 0 25px
+		+max(969px)
+			flex-wrap: wrap

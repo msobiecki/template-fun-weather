@@ -94,7 +94,8 @@ const cssDevelop = [
 	}, {
 		loader: 'sass-loader',
 		options: {
-			sourceMap: true
+			sourceMap: true,
+			includePaths: ['node_modules']
 		}
 	}];
 
@@ -112,7 +113,8 @@ const cssProduction = ExtractTextPlugin.extract({
 		loader: 'sass-loader',
 		options:
 			{
-				sourceMap: true
+				sourceMap: true,
+				includePaths: ['node_modules']
 			}
 	}]
 });
@@ -131,7 +133,8 @@ const cssBuild = ExtractTextPlugin.extract({
 		loader: 'sass-loader',
 		options:
 			{
-				sourceMap: false
+				sourceMap: false,
+				includePaths: ['node_modules']
 			}
 	}]
 });
