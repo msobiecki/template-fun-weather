@@ -1,0 +1,19 @@
+.header
+	&__wrapper
+		display: block
+		position: fixed
+		top: 0
+		right: 0
+		left: 0
+		background-color: $cornflower-blue
+		z-index: 999
+
+	&__container
+		+container
+
+	&__box
+		display: flex
+		flex-wrap: nowrap
+		padding: 10px 0
+		+max(969px)
+			flex-wrap: wrap
