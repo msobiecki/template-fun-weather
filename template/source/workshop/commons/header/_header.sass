@@ -1,19 +1,51 @@
 .header
+	min-height: 108px
+	+max(969px)
+		min-height: 64px
+	+max(767px)
+			min-height: 44px
+
 	&__wrapper
-		display: block
+		display: flex
 		position: fixed
 		top: 0
 		right: 0
 		left: 0
+		align-items: flex-start
+		min-height: 108px
+		transition: .2s min-height
+		border-bottom: 1px solid $cornflower-blue
 		background-color: $cornflower-blue
 		z-index: 999
+		+max(969px)
+			min-height: 64px
+		+max(767px)
+			min-height: 44px
+			+landscape
+				position: relative 
 
-	&__container
-		+container
+		.-minimalize &
+			+min(970px)
+				min-height: 64px
 
 	&__box
+		+container
 		display: flex
 		flex-wrap: nowrap
-		padding: 10px 0
+		align-items: center
+		justify-content: space-between
+		padding-top: 25px
+		padding-bottom: 25px
+		transition: .2s padding-top, .2s padding-bottom
 		+max(969px)
 			flex-wrap: wrap
+			padding-top: 5px
+			padding-bottom: 5px
+
+		.-minimalize &
+			+min(970px)
+				padding-top: 5px
+				padding-bottom: 5px
+
+		&::before, &::after
+			display: none
