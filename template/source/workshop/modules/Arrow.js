@@ -13,7 +13,7 @@ const Arrow = {
 	},
 	init: function (args) {
 		this.settings = $.extend(true, this.settings, args);
-		this.settings.target.length ? this.catchDOM() : this.throwError('Target not set.');
+		this.settings.target.length ? this.catchDOM() : '';
 	},
 	catchDOM: function () {
 		let _target = $(this.settings.target);
@@ -21,7 +21,7 @@ const Arrow = {
 			element: _target
 		};
 
-		this.$target && this.$target.element ? this.bindEvents() : this.throwError('Required elements not find.');
+		this.$target.element.length ? this.bindEvents() : '';
 	},
 	bindEvents: function () {
 		this.$target.element.on('click', this.clickEvent.bind(this));
@@ -36,9 +36,6 @@ const Arrow = {
 	scrollEvent: function (event) {
 		let target = $(event.target);
 		target.scrollTop() > (target.height() / 2) ? this.$target.element.addClass('-visible') : this.$target.element.removeClass('-visible');
-	},
-	throwError: function (text) {
-		console.log('[Arrow] Error: ' + text);
 	}
 };
 

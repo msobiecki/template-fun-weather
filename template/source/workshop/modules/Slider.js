@@ -35,11 +35,12 @@ const Slider = {
 
 	init: function (args) {
 		this.settings = $.extend(true, this.settings, args);
-		this.settings.target.length ? this.catchDOM() : this.throwError('Target not set.');
+		this.settings.target.length ? this.catchDOM() : '';
 	},
 
 	catchDOM: function () {
 		let _target = $(this.settings.target);
+
 
 		this.$target = {
 			element: _target,
@@ -47,29 +48,19 @@ const Slider = {
 			item: _target.find(this.settings.item)
 		};
 
-		this.settings.options.arrows && _target.find(this.settings.arrows).length ? (this.target = $.extend(true, this.target, {
-			arrows: _target.find(this.settings.arrows)
-		}), this.settings.options = $.extend(true, this.settings.options, {appendArrows: this.settings.arrows})) : (this.settings.options.arrows = false, this.throwError('Arrows are not possible.'));
+		this.settings.options.arrows && _target.find(this.settings.arrows).length ? (this.$target = $.extend(true, this.$target, { arrows: _target.find(this.settings.arrows)}), this.settings.options = $.extend(true, this.settings.options, {appendArrows: this.settings.arrows
+		})) : this.settings.options.arrows = false;
 
-		this.settings.options.dots && _target.find(this.settings.dots).length ? (this.target = $.extend(true, this.target, {dots:_target.find(this.settings.dots)}),this.settings.options = $.extend(true, this.settings.options, {appendDots: this.settings.dots})) : (this.settings.options.dots = false, this.throwError('Dots are not possible.'));
+		this.settings.options.dots && _target.find(this.settings.dots).length ? (this.$target = $.extend(true, this.$target, {dots: _target.find(this.settings.dots)}), this.settings.options = $.extend(true, this.settings.options, {appendDots: this.settings.dots})) : (this.settings.options.dots = false);
 
-		this.$target && this.$target.element && this.$target.box && this.$target.item ? this.createSlider() : this.throwError('Required elements not find.');
+		this.$target.element.length && this.$target.box.length && this.$target.item.length ? this.createSlider() : '';
 	},
 
 	createSlider: function () {
-		this.$target.box.slick(this.settings.options); 
-	},
-
-	throwError: function (text) {
-		console.log('[Slider] Error: ' + text);
+		this.$target.box.slick(this.settings.options);
 	}
 };
 
-const SliderImageGalleryPopup = {
-	test: console.log('test')
+export {
+	Slider
 };
-
-// TODO Image Gallery Popup
-// TODO Video Gallery Popup + Generate Thumbnail
-
-export {Slider, SliderImageGalleryPopup};

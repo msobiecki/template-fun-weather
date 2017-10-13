@@ -13,7 +13,7 @@ const Loader = {
 	},
 	init: function (args) {
 		this.settings = $.extend(true, this.settings, args);
-		this.settings.target.length ? this.catchDOM() : this.throwError('Target not set.');
+		this.settings.target.length ? this.catchDOM() : '';
 	},
 	catchDOM: function () {
 		let _target = $(this.settings.target);
@@ -22,13 +22,10 @@ const Loader = {
 			element: _target,
 		};
 
-		this.$target && this.$target.element ? this.runLoader() : this.throwError('Required elements not find.');
+		this.$target.element.length ? this.runLoader() : '';
 	},
 	runLoader: function () {
 		this.$target.element.fadeOut(400);
-	},
-	throwError: function (text) {
-		console.log('[Loader] Error: ' + text);
 	}
 };
 

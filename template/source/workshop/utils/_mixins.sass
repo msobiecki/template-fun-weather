@@ -3,6 +3,7 @@
 =title-main
 	display: block
 	width: 100%
+	margin-top: 130px
 	margin-bottom: 25px
 	color: $cornflower-blue
 	font-size: 36px
@@ -15,3 +16,34 @@
 	color: $pantone
 	font-size: 18px
 	cursor: default
+
+=btn
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	min-width: 150px
+	height: 52px
+	margin: 3px
+	padding: 0 20px
+	transition: .2s background-color, .2s color, .2s border
+	border-radius: 7px
+	font-size: 18px
+	font-weight: bold
+	line-height: 1
+	text-decoration: none
+
+=btn-primary
+	border: 1px solid #FF5E62
+	background-color: #FF5E62
+	color: $white
+
+	&:hover
+		border: 1px solid $white
+
+=btn-secondary
+	border: 1px solid $indygo
+	background-color: $indygo
+	color: $white
+
+	&:hover
+		border: 1px solid $white

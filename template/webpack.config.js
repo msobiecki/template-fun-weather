@@ -47,18 +47,6 @@ if (!isProduction) {
 			template: 'templates/main.pug'
 		})
 	);
-	pluginsConfig.push(
-		new HtmlWebpackPlugin({
-			minify: {
-				collapseWhitespace: false,
-				html5: true,
-				removeComments: true
-			},
-			hash: false,
-			filename: 'contact.html',
-			template: 'templates/contact.pug'
-		})
-	);
 
 	pluginsConfig.push(
 		new webpack.HotModuleReplacementPlugin()

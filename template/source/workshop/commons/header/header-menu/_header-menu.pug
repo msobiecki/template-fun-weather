@@ -1,5 +1,9 @@
+//- Header Menu
 .header-menu
-	a.header-menu__link(href="#") Home
-	a.header-menu__link(href="#") Features
-	a.header-menu__link(href="#") Reviews
-	a.header-menu__link(href="#") Download
+	button.hamburger.hamburger--collapse.header-menu__toggle(type="button")
+		span.hamburger-box 
+			span.hamburger-inner.header-menu__toggleInner
+	.header-menu__menu
+		.header-menu__box
+			include ../../menu/_menu
+			include ../header-social/_header-social
